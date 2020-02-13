@@ -1,4 +1,5 @@
 <h1> Articles </h1>
+<?php $this->Html->link('add Article', ['action' => 'add']) ?>
 <table>
     <tr>
         <th>Title</th>
