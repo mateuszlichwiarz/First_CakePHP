@@ -4,9 +4,16 @@ namespace App\Controller;
 
 class ArticlesController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->loadComponent('Paginator');
+        $this->loadComponent('Flash');
+    }
+
     public function index()
     {
-        $this->loadComponent('Paginator');
         $articles = $this->Paginator->paginate($this->Articles->find());
         $this->set(compact('articles'));
     }
