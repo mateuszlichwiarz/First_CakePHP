@@ -55,7 +55,7 @@ class ArticlesController extends AppController
             $this->Articles->patchEntity($article, $this->request->getData());
             if($this->Articles->save($article))
             {
-                $this->Flash->success(__('Your article has benn updated.'));
+                $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Unable to update your article.'));
